@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="listProductItemBigSpacer">16dp</dimen>
+    <dimen name="listProductItemSmallSpacer">8dp</dimen>
+    <dimen name="inlineButtonsHW">30dp</dimen>
+    <dimen name="listItemRoundedBGStroke">2dp</dimen>
+    <dimen name="listItemRoundedCornerBig">29dp</dimen>
+    <dimen name="listItemRoundedCornerSmall">17dp</dimen>
+    <dimen name="listItemSidesMargin">2dp</dimen>
+    <dimen name="design_fab_image_size" tools:override="true">36dp</dimen>
+    <dimen name="fabMargin">16dp</dimen>
+    <dimen name="detailsActivityBigSpacer">16dp</dimen>
+    <dimen name="dividerHeight">3dp</dimen>
+    <dimen name="dividerBottomMargin">16dp</dimen>
+    <dimen name="dividerTopMargin">2dp</dimen>
+    <dimen name="detailsActivitySmallSpacer">8dp</dimen>
+    <dimen name="productImageHeight">130dp</dimen>
+    <dimen name="emptyInventoryTopMargin">70dp</dimen>
+    <dimen name="productDetailsLandFixer">70dp</dimen>
+    <dimen name="fixFABCoveringSpace">45dp</dimen>
+    <dimen name="circledBackgroundDiem">180dp</dimen>
+    <dimen name="circledBackgroundPadding">3dp</dimen>
+</resources>

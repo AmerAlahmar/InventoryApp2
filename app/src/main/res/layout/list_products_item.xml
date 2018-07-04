@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/listItemSidesMargin"
+    android:layout_marginRight="@dimen/listItemSidesMargin"
+    android:layout_marginTop="@dimen/listProductItemSmallSpacer"
+    android:background="@drawable/rounded_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:padding="@dimen/listProductItemBigSpacer">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/listProductItemSmallSpacer">
+
+        <TextView
+            android:id="@+id/productNamePlacerTextView"
+            style="@style/primaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@id/productPricePlacerTextView"
+            android:layout_toStartOf="@id/productPricePlacerTextView"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:textAlignment="textStart"
+            tools:text="Name of Product" />
+
+        <TextView
+            android:id="@+id/productPricePlacerTextView"
+            style="@style/secondaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/productNamePlacerTextView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/productNamePlacerTextView"
+            android:gravity="center_vertical|end"
+            android:textAlignment="textEnd"
+            tools:text="0.00 $" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/productQuantityDecImageButton"
+            android:layout_width="@dimen/inlineButtonsHW"
+            android:layout_height="@dimen/inlineButtonsHW"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/productQuantityDecButtonDescription"
+            android:scaleType="fitXY"
+            android:src="@drawable/minus_one_button" />
+
+        <TextView
+            android:id="@+id/productQuantityPlacerTextView"
+            style="@style/secondaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/productQuantityIncImageButton"
+            android:layout_alignTop="@id/productQuantityIncImageButton"
+            android:layout_toEndOf="@id/productQuantityDecImageButton"
+            android:layout_toLeftOf="@id/productQuantityIncImageButton"
+            android:layout_toRightOf="@id/productQuantityDecImageButton"
+            android:layout_toStartOf="@id/productQuantityIncImageButton"
+            android:gravity="center"
+            tools:text="0" />
+
+        <ImageButton
+            android:id="@+id/productQuantityIncImageButton"
+            android:layout_width="@dimen/inlineButtonsHW"
+            android:layout_height="@dimen/inlineButtonsHW"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/productQuantityIncButtonDescription"
+            android:scaleType="fitXY"
+            android:src="@drawable/plus_one_button" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+        android:width="@dimen/listItemRoundedBGStroke"
+        android:color="@color/colorPrimaryDark" />
+    <padding
+        android:bottom="@dimen/listProductItemSmallSpacer"
+        android:left="@dimen/listProductItemSmallSpacer"
+        android:right="@dimen/listProductItemSmallSpacer"
+        android:top="@dimen/listProductItemSmallSpacer" />
+    <corners
+        android:bottomLeftRadius="@dimen/listItemRoundedCornerBig"
+        android:bottomRightRadius="@dimen/listItemRoundedCornerSmall"
+        android:topLeftRadius="@dimen/listItemRoundedCornerSmall"
+        android:topRightRadius="@dimen/listItemRoundedCornerBig" />
+    <solid android:color="@color/colorAccent" />
+</shape>

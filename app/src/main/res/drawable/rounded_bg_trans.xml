@@ -1,0 +1,16 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+        android:width="0dp"
+        android:color="@color/halfWhite" />
+    <padding
+        android:bottom="@dimen/circledBackgroundPadding"
+        android:left="@dimen/circledBackgroundPadding"
+        android:right="@dimen/circledBackgroundPadding"
+        android:top="@dimen/circledBackgroundPadding" />
+    <corners
+        android:bottomLeftRadius="@dimen/circledBackgroundDiem"
+        android:bottomRightRadius="@dimen/circledBackgroundDiem"
+        android:topLeftRadius="@dimen/circledBackgroundDiem"
+        android:topRightRadius="@dimen/circledBackgroundDiem" />
+    <solid android:color="@color/halfWhite" />
+</shape>

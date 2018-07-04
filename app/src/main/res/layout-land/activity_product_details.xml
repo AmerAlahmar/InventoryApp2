@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/productDetailsLandFixer"
+            android:layout_marginRight="@dimen/productDetailsLandFixer"
+            android:orientation="vertical"
+            android:padding="@dimen/detailsActivityBigSpacer">
+
+            <TextView
+                style="@style/titlesTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/productDetailsSectionTitle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dividerHeight"
+                android:layout_marginBottom="@dimen/dividerBottomMargin"
+                android:layout_marginTop="@dimen/dividerTopMargin"
+                android:background="@color/colorDivider" />
+
+            <ImageView
+                android:id="@+id/productImageImageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/productImageHeight"
+                android:layout_marginBottom="@dimen/detailsActivitySmallSpacer"
+                android:contentDescription="@string/productImageDescription"
+                android:scaleType="centerCrop"
+                android:src="@drawable/no_image" />
+
+            <TextView
+                android:id="@+id/productNamePlacerTextView"
+                style="@style/primaryTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/detailsActivitySmallSpacer"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                tools:text="Product Name" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/detailsActivitySmallSpacer">
+
+                <TextView
+                    android:id="@+id/productPriceTitleTextView"
+                    style="@style/primaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="@dimen/detailsActivitySmallSpacer"
+                    android:layout_marginRight="@dimen/detailsActivitySmallSpacer"
+                    android:text="@string/productPriceTitle" />
+
+                <TextView
+                    android:id="@+id/productPricePlacerTextView"
+                    style="@style/secondaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/productPriceTitleTextView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/productPriceTitleTextView"
+                    android:layout_toEndOf="@id/productPriceTitleTextView"
+                    android:layout_toRightOf="@id/productPriceTitleTextView"
+                    android:gravity="end"
+                    tools:text="0.00 $" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/detailsActivitySmallSpacer">
+
+                <TextView
+                    android:id="@+id/productQuantityTitleTextView"
+                    style="@style/primaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@id/productQuantityChangerRL"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@id/productQuantityChangerRL"
+                    android:layout_marginEnd="@dimen/detailsActivitySmallSpacer"
+                    android:layout_marginRight="@dimen/detailsActivitySmallSpacer"
+                    android:gravity="center_vertical"
+                    android:text="@string/productQuantityTitle" />
+
+                <RelativeLayout
+                    android:id="@+id/productQuantityChangerRL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/productQuantityTitleTextView"
+                    android:layout_toRightOf="@id/productQuantityTitleTextView">
+
+                    <ImageButton
+                        android:id="@+id/productQuantityDecImageButton"
+                        android:layout_width="@dimen/inlineButtonsHW"
+                        android:layout_height="@dimen/inlineButtonsHW"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/productQuantityDecButtonDescription"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/minus_one_button" />
+
+                    <TextView
+                        android:id="@+id/productQuantityPlacerTextView"
+                        style="@style/secondaryTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/productQuantityIncImageButton"
+                        android:layout_alignTop="@id/productQuantityIncImageButton"
+                        android:layout_toEndOf="@id/productQuantityDecImageButton"
+                        android:layout_toLeftOf="@id/productQuantityIncImageButton"
+                        android:layout_toRightOf="@id/productQuantityDecImageButton"
+                        android:layout_toStartOf="@id/productQuantityIncImageButton"
+                        android:gravity="center"
+                        tools:text="0" />
+
+                    <ImageButton
+                        android:id="@+id/productQuantityIncImageButton"
+                        android:layout_width="@dimen/inlineButtonsHW"
+                        android:layout_height="@dimen/inlineButtonsHW"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/productQuantityIncButtonDescription"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/plus_one_button" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/detailsActivityBigSpacer">
+
+                <TextView
+                    style="@style/titlesTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/productSupplierCallImageButton"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@id/productSupplierCallImageButton"
+                    android:layout_toLeftOf="@id/productSupplierCallImageButton"
+                    android:layout_toStartOf="@id/productSupplierCallImageButton"
+                    android:gravity="start|center_horizontal"
+                    android:text="@string/productSupplierDetailsSectionTitle" />
+
+                <ImageButton
+                    android:id="@+id/productSupplierCallImageButton"
+                    android:layout_width="@dimen/inlineButtonsHW"
+                    android:layout_height="@dimen/inlineButtonsHW"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/detailsActivitySmallSpacer"
+                    android:layout_marginStart="@dimen/detailsActivitySmallSpacer"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/productSupplierCallButtonDescription"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/call_supplier_button" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dividerHeight"
+                android:layout_marginBottom="@dimen/dividerBottomMargin"
+                android:layout_marginTop="@dimen/dividerTopMargin"
+                android:background="@color/colorDivider" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/detailsActivitySmallSpacer">
+
+                <TextView
+                    android:id="@+id/productSupplierNameTitleTextView"
+                    style="@style/primaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="@dimen/detailsActivitySmallSpacer"
+                    android:layout_marginRight="@dimen/detailsActivitySmallSpacer"
+                    android:text="@string/productSupplierNameTitle" />
+
+                <TextView
+                    android:id="@+id/productSupplierNamePlacerTextView"
+                    style="@style/secondaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/productSupplierNameTitleTextView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/productSupplierNameTitleTextView"
+                    android:layout_toEndOf="@id/productSupplierNameTitleTextView"
+                    android:layout_toRightOf="@id/productSupplierNameTitleTextView"
+                    android:gravity="end"
+                    tools:text="Supplier Name" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/detailsActivitySmallSpacer">
+
+                <TextView
+                    android:id="@+id/productSupplierContactTitleTextView"
+                    style="@style/primaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="@dimen/detailsActivitySmallSpacer"
+                    android:layout_marginRight="@dimen/detailsActivitySmallSpacer"
+                    android:text="@string/productSupplierContactTitle" />
+
+                <TextView
+                    android:id="@+id/productSupplierContactPlacerTextView"
+                    style="@style/secondaryTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/productSupplierContactTitleTextView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/productSupplierContactTitleTextView"
+                    android:layout_toEndOf="@id/productSupplierContactTitleTextView"
+                    android:layout_toRightOf="@id/productSupplierContactTitleTextView"
+                    android:gravity="end"
+                    tools:text="+000000000000" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/editProductFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fabMargin"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/update_product"
+        app:borderWidth="3dp"
+        app:elevation="3dp"
+        app:fabSize="normal"
+        app:rippleColor="@color/colorPrimaryDark" />
+</RelativeLayout>
